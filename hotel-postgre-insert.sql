@@ -74,13 +74,13 @@ INSERT INTO room ("number", hotel_id, capacity, "type") VALUES ('201', 7, 5, 1);
 INSERT INTO room ("number", hotel_id, capacity, "type") VALUES ('202', 7, 5, 1);
 INSERT INTO room ("number", hotel_id, capacity, "type") VALUES ('203', 7, 5, 1);
 
-INSERT INTO client (last_name, first_name, address, city) VALUES ('Doe', 'John', '', 'LA');
-INSERT INTO client (last_name, first_name, address, city) VALUES ('Homme', 'Josh', '', 'Palm Desert');
-INSERT INTO client (last_name, first_name, address, city) VALUES ('Paul', 'Weller', '', 'Londres');
-INSERT INTO client (last_name, first_name, address, city) VALUES ('White', 'Jack', '', 'Detroit');
-INSERT INTO client (last_name, first_name, address, city) VALUES ('Claypool', 'Les', '', 'San Francisco');
-INSERT INTO client (last_name, first_name, address, city) VALUES ('Squire', 'Chris', '', 'Londres');
-INSERT INTO client (last_name, first_name, address, city) VALUES ('Wood', 'Ronnie', '', 'Londres');
+INSERT INTO client (last_name, first_name, address, city) VALUES ('Doe', 'John', 'Hollywood Boulevard', 'LA');
+INSERT INTO client (last_name, first_name, address, city) VALUES ('Homme', 'Josh', 'Santa Rosa Way', 'Palm Desert');
+INSERT INTO client (last_name, first_name, address, city) VALUES ('Paul', 'Weller', 'Marylebone Road', 'Londres');
+INSERT INTO client (last_name, first_name, address, city) VALUES ('White', 'Jack', 'Walter street', 'Detroit');
+INSERT INTO client (last_name, first_name, address, city) VALUES ('Claypool', 'Les', 'Ocean avenue', 'San Francisco');
+INSERT INTO client (last_name, first_name, address, city) VALUES ('Squire', 'Chris', 'Devonshire street', 'Londres');
+INSERT INTO client (last_name, first_name, address, city) VALUES ('Wood', 'Ronnie', 'Leighton road', 'Londres');
 
 INSERT INTO booking (room_id, client_id, booking_date, stay_start_date, stay_end_date, price, deposit) VALUES (1, 1, '2022-01-10', '2022-07-01', '2022-07-15', 2400, 800);
 INSERT INTO booking (room_id, client_id, booking_date, stay_start_date, stay_end_date, price, deposit) VALUES (2, 2, '2022-01-10', '2022-07-01', '2022-07-15', 3400, 100);
@@ -90,4 +90,13 @@ INSERT INTO booking (room_id, client_id, booking_date, stay_start_date, stay_end
 INSERT INTO booking (room_id, client_id, booking_date, stay_start_date, stay_end_date, price, deposit) VALUES (4, 6, '2022-01-10', '2022-07-01', '2022-07-15', 2400, 780);
 INSERT INTO booking (room_id, client_id, booking_date, stay_start_date, stay_end_date, price, deposit) VALUES (4, 6, '2022-01-10', '2022-07-01', '2022-07-15', 500, 80);
 INSERT INTO booking (room_id, client_id, booking_date, stay_start_date, stay_end_date, price, deposit) VALUES (4, 1, '2022-01-10', '2022-07-01', '2022-07-15', 40, 0);
+
+INSERT INTO station ("name", altitude) VALUES ('La Montagne', 2500);
+INSERT INTO station (id, "name", altitude) VALUES (2, 'station2', 1500);
+    INSERT INTO hotel (id, station_id, name, category, address, city) VALUES (1, 1, 'Le Magnifique', 3, 'rue du bas', 'Pralo');
+    INSERT INTO hotel (id, station_id, name, category, address, city) VALUES (2, 1, 'Hotel du haut', 1, 'rue du haut', 'Pralo');
+        INSERT INTO room ("number", hotel_id, capacity, "type") VALUES ('001', 1, 2, 1);
+        INSERT INTO room ("number", hotel_id, capacity, "type") VALUES ('002', 1, 3, 1);
+            INSERT INTO client (last_name, first_name, address, city) VALUES ('Doe', 'John', '', 'LA');
+            INSERT INTO client (last_name, first_name, address, city) VALUES ('Homme', 'Josh', '', 'Palm Desert');
 
